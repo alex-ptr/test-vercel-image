@@ -32,9 +32,7 @@
 			2048,
 			3840
 		],
-		"domains": [
-			"placeholder.com"
-		],
+		"domains": [],
 		"remotePatterns": [
 			{
 				"protocol": "https",

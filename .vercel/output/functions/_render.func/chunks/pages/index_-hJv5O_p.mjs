@@ -1,5 +1,5 @@
 import { d as createComponent, r as renderTemplate, f as addAttribute, h as renderHead, i as renderComponent, g as createAstro } from '../astro_lqYiiwMr.mjs';
-import { $ as $$Image } from './generic_DM83XBLf.mjs';
+import { $ as $$Image } from './generic_DthimBWI.mjs';
 
 const $$Astro = createAstro();
 const $$Index = createComponent(($$result, $$props, $$slots) => {
