@@ -6,6 +6,8 @@ const remoteUrl =
 
 const localUrl =
   "http://localhost:8055/assets/0641044c-aaf9-40ff-a476-6cf42277c370?width=734&height=480&access_token=XjflWToBxjKPRMgVRawIM-Rjmr8p538Z";
+
+const placeHolderUrl = "https://via.placeholder.com/367x240";
 ---
 
 <html lang="en">
@@ -23,11 +25,6 @@ const localUrl =
     <h2>Remote Image</h2>
     <Image src={remoteUrl} width="367" height="240" alt="Remote" />
     <h2>Placeholder</h2>
-    <Image
-      src="https://via.placeholder.com/367x240"
-      width="367"
-      height="240"
-      alt="Placeholder"
-    />
+    <Image src={placeHolderUrl} width="367" height="240" alt="Placeholder" />
   </body>
 </html>
