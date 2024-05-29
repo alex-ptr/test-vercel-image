@@ -1,8 +1,11 @@
 ---
 import { Image } from "astro:assets";
 
-const url =
-  "https://app.atelier-jbp.fr/assets/ac0a0690-5551-42d3-8680-10e04ce9b22f?width=367&height=240&access_token=2a7gXkchTnIzw7uED1oh08SWrHAGimBg";
+const remoteUrl =
+  "https://app.atelier-jbp.fr/assets/ac0a0690-5551-42d3-8680-10e04ce9b22f?width=734&height=480&access_token=2a7gXkchTnIzw7uED1oh08SWrHAGimBg";
+
+const localUrl =
+  "http://localhost:8055/assets/0641044c-aaf9-40ff-a476-6cf42277c370?width=734&height=480&access_token=XjflWToBxjKPRMgVRawIM-Rjmr8p538Z";
 ---
 
 <html lang="en">
@@ -15,12 +18,16 @@ const url =
   </head>
   <body>
     <h1>Astro</h1>
+    <h2>Local Image</h2>
+    <Image src={localUrl} width="367" height="240" alt="" />
+    <h2>Remote Image</h2>
+    <Image src={remoteUrl} width="367" height="240" alt="" />
+    <h2>Placeholder</h2>
     <Image
-      src="https://via.placeholder.com/500x500"
-      width="500"
-      height="500"
+      src="https://via.placeholder.com/367x240"
+      width="367"
+      height="240"
       alt=""
     />
-    <Image src={url} width="500" height="500" alt="" />
   </body>
 </html>
