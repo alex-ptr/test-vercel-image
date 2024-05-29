@@ -33,14 +33,9 @@
 			3840
 		],
 		"domains": [
-			"via.placeholder.com"
+			"via.placeholder.com",
+			"app.atelier-jbp.fr"
 		],
-		"remotePatterns": [
-			{
-				"protocol": "https",
-				"hostname": "via.placeholder.com",
-				"pathname": "/500x500/"
-			}
-		]
+		"remotePatterns": []
 	}
 }
