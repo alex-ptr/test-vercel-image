@@ -804,7 +804,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      '../build-service_BVMnwaqy.mjs'
+      '../build-service_5wUaBtoj.mjs'
     ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
@@ -976,7 +976,7 @@ const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
   })} <img${addAttribute(fallbackImage.src, "src")}${spreadAttributes(imgAdditionalAttributes)}${spreadAttributes(fallbackImage.attributes)}> </picture>`;
 }, "/home/alexandre/Tests/test-vercel-image/node_modules/.pnpm/astro@4.9.2_typescript@5.4.5/node_modules/astro/components/Picture.astro", void 0);
 
-const imageConfig = {"service":{"entrypoint":"@astrojs/vercel/build-image-service","config":{"sizes":[500,640,750,828,1080,1200,1920,2048,3840],"domains":[],"remotePatterns":[{"protocol":"https","hostname":"^via\\.placeholder\\.com$","pathname":"^/500x500/.*$"}]}},"domains":[],"remotePatterns":[]};
+const imageConfig = {"service":{"entrypoint":"@astrojs/vercel/build-image-service","config":{"sizes":[500,640,750,828,1080,1200,1920,2048,3840],"domains":["via.placeholder.com"],"remotePatterns":[{"protocol":"https","hostname":"via.placeholder.com","pathname":"/500x500/"}]}},"domains":[],"remotePatterns":[]};
 					const getImage = async (options) => await getImage$1(options, imageConfig);
 
 const mimes = {
