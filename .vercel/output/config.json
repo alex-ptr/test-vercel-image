@@ -1,41 +1,53 @@
 {
-	"version": 3,
-	"routes": [
-		{
-			"src": "^/_astro/(.*)$",
-			"headers": {
-				"cache-control": "public, max-age=31536000, immutable"
-			},
-			"continue": true
-		},
-		{
-			"handle": "filesystem"
-		},
-		{
-			"src": "^\\/_image$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/$",
-			"dest": "_render"
-		}
-	],
-	"images": {
-		"sizes": [
-			500,
-			640,
-			750,
-			828,
-			1080,
-			1200,
-			1920,
-			2048,
-			3840
-		],
-		"domains": [
-			"via.placeholder.com",
-			"app.atelier-jbp.fr"
-		],
-		"remotePatterns": []
-	}
+  "version": 3,
+  "routes": [
+    {
+      "src": "^/_astro/(.*)$",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "continue": true
+    },
+    {
+      "handle": "error"
+    },
+    {
+      "status": 404,
+      "src": "^(?!/api).*$",
+      "dest": "/404.html"
+    }
+  ],
+  "images": {
+    "sizes": [
+      500,
+      640,
+      750,
+      828,
+      1080,
+      1200,
+      1920,
+      2048,
+      3840
+    ],
+    "domains": [
+      "via.placeholder.com",
+      "app.atelier-jbp.fr",
+      "localhost:8055"
+    ],
+    "remotePatterns": [
+      {
+        "protocol": "http",
+        "hostname": "localhost",
+        "port": "8055"
+      },
+      {
+        "protocol": "https",
+        "hostname": "via.placeholder.com"
+      }
+    ]
+  },
+  "framework": {
+    "version": "4.9.2"
+  },
+  "crons": []
 }
